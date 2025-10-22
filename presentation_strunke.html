@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niklāvs Strunke (1894–1966)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 60px;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            animation: slideIn 0.5s ease;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        p, li {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slide-number {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 1.2em;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fef08a 0%, #fde047 100%);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .year {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            min-width: 100px;
+        }
+
+        .event {
+            flex: 1;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Слайд 1: Титульный -->
+        <div class="slide active">
+            <h1>Niklāvs Strunke</h1>
+            <p class="subtitle">Латвийский художник-модернист</p>
+            <p class="subtitle">(1894–1966)</p>
+        </div>
+
+        <!-- Слайд 2: Биография -->
+        <div class="slide">
+            <h2>Биография</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year">1894</div>
+                    <div class="event">Родился 6 октября в Гостынине, Российская империя, в семье унтер-офицера русской армии</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1909-1911</div>
+                    <div class="event">Учился в школе Императорского общества поощрения художеств у Николая Рериха и Ивана Билибина в Санкт-Петербурге</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1915</div>
+                    <div class="event">Добровольно вступил в конную разведку 6-го латышского стрелкового полка</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1944</div>
+                    <div class="event">Эмигрировал в Швецию</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1966</div>
+                    <div class="event">Умер 13 октября в Риме</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Слайд 3: Художественная деятельность -->
+        <div class="slide">
+            <h2>Художественная деятельность</h2>
+            <p>Niklāvs Strunke был одним из <span class="highlight">самых оригинальных художников латвийского модернистского поколения</span>.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Жанры работ</h3>
+                    <ul>
+                        <li>Живопись</li>
+                        <li>Графика</li>
+                        <li>Витражи</li>
+                        <li>Сценография</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Литературная деятельность</h3>
+                    <ul>
+                        <li>Писал об искусстве</li>
+                        <li>Публиковался под псевдонимом <strong>Palmenu Klavs</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Слайд 4: Вклад в книжную иллюстрацию -->
+        <div class="slide">
+            <h2>Вклад в книжную иллюстрацию</h2>
+            <p>В период с 1920 по 1944 год Strunke сделал огромный вклад в латвийскую книжную культуру:</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Обложки книг</h3>
+                    <p style="font-size: 3em; text-align: center; color: #667eea; margin: 20px 0;">700+</p>
+                    <p style="text-align: center;">Более 700 обложек книг</p>
+                </div>
+                <div class="card">
+                    <h3>Иллюстрации</h3>
+                    <p style="font-size: 3em; text-align: center; color: #764ba2; margin: 20px 0;">~30</p>
+                    <p style="text-align: center;">Около 30 романов, поэзий и сказок</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Слайд 5: Художественные группы -->
+        <div class="slide">
+            <h2>Художественные объединения</h2>
+            <h3>Рижская группа художников</h3>
+            <p>Strunke присоединился к инновационной <span class="highlight">экспрессионистской группе</span>, ориентированной на французское искусство, которая после Первой мировой войны стала <strong>Рижской группой художников</strong>.</p>
+            <h3>Особенности стиля</h3>
+            <ul>
+                <li>Модернистские тенденции</li>
+                <li>Экспрессионизм</li>
+                <li>Французское влияние</li>
+                <li>Оригинальный авторский почерк</li>
+            </ul>
+        </div>
+
+        <!-- Слайд 6: Известные работы -->
+        <div class="slide">
+            <h2>Известные работы</h2>
+            <h3>«Человек, входящий в комнату» (1927)</h3>
+            <p>Одна из самых известных картин художника, включённая в <span class="highlight">Канон латвийской культуры</span>.</p>
+            <h3>Характеристики творчества</h3>
+            <ul>
+                <li>Уникальный модернистский стиль</li>
+                <li>Работы находятся в коллекциях латвийских музеев</li>
+                <li>Графические работы хранятся в библиотеке Латвийского университета</li>
+                <li>Произведения представлены в галерее Tate (Лондон)</li>
+            </ul>
+        </div>
+
+        <!-- Слайд 7: Наследие -->
+        <div class="slide">
+            <h2>Наследие</h2>
+            <h3>Международное признание</h3>
+            <ul>
+                <li>Работы выставляются в престижных галереях и музеях мира</li>
+                <li>Представлен в галерее Tate (Великобритания)</li>
+                <li>Произведения продаются на международных аукционах</li>
+            </ul>
+            <h3>Значение для латвийской культуры</h3>
+            <ul>
+                <li>Один из ключевых представителей латвийского модернизма</li>
+                <li>Огромное влияние на латвийскую книжную графику</li>
+                <li>Работы включены в Канон латвийской культуры</li>
+            </ul>
+        </div>
+
+        <!-- Слайд 8: Заключение -->
+        <div class="slide">
+            <h2>Заключение</h2>
+            <p style="font-size: 1.5em; line-height: 2;">Niklāvs Strunke (1894–1966) — выдающийся <span class="highlight">латвийский художник-модернист</span>, чьё творчество охватывало живопись, графику, витражи и сценографию.</p>
+            <p style="font-size: 1.4em; line-height: 2; margin-top: 30px;">Его вклад в латвийскую культуру, особенно в области книжной иллюстрации, остаётся <strong>неоценимым</strong>.</p>
+            <p style="font-size: 1.4em; line-height: 2; margin-top: 30px;">Работы Strunke продолжают вдохновлять новые поколения художников и ценителей искусства по всему миру.</p>
+        </div>
+    </div>
+
+    <div class="slide-number">
+        <span id="current-slide">1</span> / <span id="total-slides">8</span>
+    </div>
+
+    <div class="controls">
+        <button id="prev-btn" onclick="prevSlide()">← Назад</button>
+        <button id="next-btn" onclick="nextSlide()">Вперёд →</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        document.getElementById('total-slides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        // Клавиатурная навигация
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Инициализация
+        prevBtn.disabled = true;
+    </script>
+</body>
+</html>
