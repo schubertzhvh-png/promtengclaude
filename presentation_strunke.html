@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +37,7 @@
             flex-direction: column;
             justify-content: center;
             animation: slideIn 0.5s ease;
+            overflow-y: auto;
         }
 
         .slide.active {
@@ -169,7 +170,7 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #667eea;
-            min-width: 100px;
+            min-width: 120px;
         }
 
         .event {
@@ -197,147 +198,210 @@
         .card h3 {
             margin-top: 0;
         }
+
+        .toc-list {
+            list-style: none;
+            margin-left: 0;
+            margin-top: 30px;
+        }
+
+        .toc-list li {
+            font-size: 1.4em;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .sources-list {
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .sources-list li {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+            font-size: 1.1em;
+        }
+
+        .thank-you {
+            text-align: center;
+            font-size: 4em;
+            color: #667eea;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="presentation">
-        <!-- Слайд 1: Титульный -->
+        <!-- Slaids 1: Virsraksts -->
         <div class="slide active">
             <h1>Niklāvs Strunke</h1>
-            <p class="subtitle">Латвийский художник-модернист</p>
+            <p class="subtitle">Latviešu modernistu gleznotājs</p>
             <p class="subtitle">(1894–1966)</p>
         </div>
 
-        <!-- Слайд 2: Биография -->
+        <!-- Slaids 2: Saturs -->
         <div class="slide">
-            <h2>Биография</h2>
+            <h2>Saturs</h2>
+            <ul class="toc-list">
+                <li>1. Biogrāfija</li>
+                <li>2. Mākslinieciskā darbība</li>
+                <li>3. Ieguldījums grāmatu ilustrācijā</li>
+                <li>4. Mākslinieciskās grupas</li>
+                <li>5. Pazīstamākie darbi</li>
+                <li>6. Mantojums</li>
+                <li>7. Avoti</li>
+            </ul>
+        </div>
+
+        <!-- Slaids 3: Biogrāfija -->
+        <div class="slide">
+            <h2>Biogrāfija</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="year">1894</div>
-                    <div class="event">Родился 6 октября в Гостынине, Российская империя, в семье унтер-офицера русской армии</div>
+                    <div class="event">Dzimis 6. oktobrī Gostiņinā, Krievijas impērijā, virsnieka ģimenē</div>
                 </div>
                 <div class="timeline-item">
                     <div class="year">1909-1911</div>
-                    <div class="event">Учился в школе Императорского общества поощрения художеств у Николая Рериха и Ивана Билибина в Санкт-Петербурге</div>
+                    <div class="event">Mācījās Imperatora sabiedrības mākslas veicināšanas skolā pie Nikolaja Rēriha un Ivana Bilibina Sanktpēterburgā</div>
                 </div>
                 <div class="timeline-item">
                     <div class="year">1915</div>
-                    <div class="event">Добровольно вступил в конную разведку 6-го латышского стрелкового полка</div>
+                    <div class="event">Brīvprātīgi iestājās 6. Latviešu strēlnieku pulka jātnieku izlūkošanas nodaļā</div>
                 </div>
                 <div class="timeline-item">
                     <div class="year">1944</div>
-                    <div class="event">Эмигрировал в Швецию</div>
+                    <div class="event">Emigrēja uz Zviedriju</div>
                 </div>
                 <div class="timeline-item">
                     <div class="year">1966</div>
-                    <div class="event">Умер 13 октября в Риме</div>
+                    <div class="event">Miris 13. oktobrī Romā</div>
                 </div>
             </div>
         </div>
 
-        <!-- Слайд 3: Художественная деятельность -->
+        <!-- Slaids 4: Mākslinieciskā darbība -->
         <div class="slide">
-            <h2>Художественная деятельность</h2>
-            <p>Niklāvs Strunke был одним из <span class="highlight">самых оригинальных художников латвийского модернистского поколения</span>.</p>
+            <h2>Mākslinieciskā darbība</h2>
+            <p>Niklāvs Strunke bija viens no <span class="highlight">oriģinālākajiem latviešu modernistu paaudzes māksliniekiem</span>.</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Жанры работ</h3>
+                    <h3>Darbu žanri</h3>
                     <ul>
-                        <li>Живопись</li>
-                        <li>Графика</li>
-                        <li>Витражи</li>
-                        <li>Сценография</li>
+                        <li>Glezniecība</li>
+                        <li>Grafika</li>
+                        <li>Vitrāžas</li>
+                        <li>Scenogrāfija</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Литературная деятельность</h3>
+                    <h3>Literārā darbība</h3>
                     <ul>
-                        <li>Писал об искусстве</li>
-                        <li>Публиковался под псевдонимом <strong>Palmenu Klavs</strong></li>
+                        <li>Rakstīja par mākslu</li>
+                        <li>Publicējās ar pseidonīmu <strong>Pālmeņu Klāvs</strong></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Слайд 4: Вклад в книжную иллюстрацию -->
+        <!-- Slaids 5: Ieguldījums grāmatu ilustrācijā -->
         <div class="slide">
-            <h2>Вклад в книжную иллюстрацию</h2>
-            <p>В период с 1920 по 1944 год Strunke сделал огромный вклад в латвийскую книжную культуру:</p>
+            <h2>Ieguldījums grāmatu ilustrācijā</h2>
+            <p>Periodā no 1920. līdz 1944. gadam Strunke sniedza milzīgu ieguldījumu latviešu grāmatu kultūrā:</p>
             <div class="grid">
                 <div class="card">
-                    <h3>Обложки книг</h3>
+                    <h3>Grāmatu vāki</h3>
                     <p style="font-size: 3em; text-align: center; color: #667eea; margin: 20px 0;">700+</p>
-                    <p style="text-align: center;">Более 700 обложек книг</p>
+                    <p style="text-align: center;">Vairāk nekā 700 grāmatu vāki</p>
                 </div>
                 <div class="card">
-                    <h3>Иллюстрации</h3>
+                    <h3>Ilustrācijas</h3>
                     <p style="font-size: 3em; text-align: center; color: #764ba2; margin: 20px 0;">~30</p>
-                    <p style="text-align: center;">Около 30 романов, поэзий и сказок</p>
+                    <p style="text-align: center;">Aptuveni 30 romāni, dzejas un pasakas</p>
                 </div>
             </div>
         </div>
 
-        <!-- Слайд 5: Художественные группы -->
+        <!-- Slaids 6: Mākslinieciskās grupas -->
         <div class="slide">
-            <h2>Художественные объединения</h2>
-            <h3>Рижская группа художников</h3>
-            <p>Strunke присоединился к инновационной <span class="highlight">экспрессионистской группе</span>, ориентированной на французское искусство, которая после Первой мировой войны стала <strong>Рижской группой художников</strong>.</p>
-            <h3>Особенности стиля</h3>
+            <h2>Mākslinieciskās grupas</h2>
+            <h3>Rīgas Mākslas grupa</h3>
+            <p>Strunke pievienojās inovatīvajai <span class="highlight">ekspresionistu grupai</span>, kas orientējās uz franču mākslu un pēc Pirmā pasaules kara kļuva par <strong>Rīgas Mākslas grupu</strong>.</p>
+            <h3>Stila īpašības</h3>
             <ul>
-                <li>Модернистские тенденции</li>
-                <li>Экспрессионизм</li>
-                <li>Французское влияние</li>
-                <li>Оригинальный авторский почерк</li>
+                <li>Modernistiskie virzieni</li>
+                <li>Ekspresionisms</li>
+                <li>Franču ietekme</li>
+                <li>Oriģināls autorraksts</li>
             </ul>
         </div>
 
-        <!-- Слайд 6: Известные работы -->
+        <!-- Slaids 7: Pazīstamākie darbi -->
         <div class="slide">
-            <h2>Известные работы</h2>
-            <h3>«Человек, входящий в комнату» (1927)</h3>
-            <p>Одна из самых известных картин художника, включённая в <span class="highlight">Канон латвийской культуры</span>.</p>
-            <h3>Характеристики творчества</h3>
+            <h2>Pazīstamākie darbi</h2>
+            <h3>„Cilvēks, kas ieiet istabā" (1927)</h3>
+            <p>Viena no slavenākajām mākslinieka gleznām, iekļauta <span class="highlight">Latvijas kultūras kanonā</span>.</p>
+            <h3>Radošā darba raksturojums</h3>
             <ul>
-                <li>Уникальный модернистский стиль</li>
-                <li>Работы находятся в коллекциях латвийских музеев</li>
-                <li>Графические работы хранятся в библиотеке Латвийского университета</li>
-                <li>Произведения представлены в галерее Tate (Лондон)</li>
+                <li>Unikāls modernistiskais stils</li>
+                <li>Darbi atrodas Latvijas muzeju kolekcijās</li>
+                <li>Grafiskie darbi glabājas Latvijas Universitātes bibliotēkā</li>
+                <li>Darbi ir izstādīti Tate galerijā (Londona)</li>
             </ul>
         </div>
 
-        <!-- Слайд 7: Наследие -->
+        <!-- Slaids 8: Mantojums -->
         <div class="slide">
-            <h2>Наследие</h2>
-            <h3>Международное признание</h3>
+            <h2>Mantojums</h2>
+            <h3>Starptautiskā atzinība</h3>
             <ul>
-                <li>Работы выставляются в престижных галереях и музеях мира</li>
-                <li>Представлен в галерее Tate (Великобритания)</li>
-                <li>Произведения продаются на международных аукционах</li>
+                <li>Darbi tiek izstādīti prestižās pasaules galerijās un muzejās</li>
+                <li>Pārstāvēts Tate galerijā (Lielbritānija)</li>
+                <li>Darbi tiek pārdoti starptautiskos izsoles namai</li>
             </ul>
-            <h3>Значение для латвийской культуры</h3>
+            <h3>Nozīme latviešu kultūrai</h3>
             <ul>
-                <li>Один из ключевых представителей латвийского модернизма</li>
-                <li>Огромное влияние на латвийскую книжную графику</li>
-                <li>Работы включены в Канон латвийской культуры</li>
+                <li>Viens no galvenajiem latviešu modernisma pārstāvjiem</li>
+                <li>Milzīga ietekme uz latviešu grāmatu grafiku</li>
+                <li>Darbi iekļauti Latvijas kultūras kanonā</li>
             </ul>
         </div>
 
-        <!-- Слайд 8: Заключение -->
+        <!-- Slaids 9: Avoti -->
         <div class="slide">
-            <h2>Заключение</h2>
-            <p style="font-size: 1.5em; line-height: 2;">Niklāvs Strunke (1894–1966) — выдающийся <span class="highlight">латвийский художник-модернист</span>, чьё творчество охватывало живопись, графику, витражи и сценографию.</p>
-            <p style="font-size: 1.4em; line-height: 2; margin-top: 30px;">Его вклад в латвийскую культуру, особенно в области книжной иллюстрации, остаётся <strong>неоценимым</strong>.</p>
-            <p style="font-size: 1.4em; line-height: 2; margin-top: 30px;">Работы Strunke продолжают вдохновлять новые поколения художников и ценителей искусства по всему миру.</p>
+            <h2>Avoti</h2>
+            <ul class="sources-list">
+                <li><strong>Wikipedia:</strong> Niklāvs Strunke (en.wikipedia.org)</li>
+                <li><strong>Tate Gallery:</strong> Niklavs Strunke 1894–1966 (tate.org.uk)</li>
+                <li><strong>Latvijas Kultūras kanons:</strong> Glezna "Cilvēks, kas ieiet istabā" (kulturaskanons.lv)</li>
+                <li><strong>Rīgas Centrālā bibliotēka:</strong> Kultūras trešdienā – Niklāvs Strunke (rcb.lv)</li>
+                <li><strong>Art UK:</strong> Strunke, Niklāvs, 1894–1966 (artuk.org)</li>
+                <li><strong>MutualArt:</strong> Niklavs Strunke Artworks at Auction (mutualart.com)</li>
+            </ul>
+        </div>
+
+        <!-- Slaids 10: Paldies -->
+        <div class="slide">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                <p class="thank-you">Paldies par uzmanību!</p>
+                <p class="subtitle" style="margin-top: 40px; font-size: 1.8em;">Niklāvs Strunke (1894–1966)</p>
+            </div>
         </div>
     </div>
 
     <div class="slide-number">
-        <span id="current-slide">1</span> / <span id="total-slides">8</span>
+        <span id="current-slide">1</span> / <span id="total-slides">10</span>
     </div>
 
     <div class="controls">
-        <button id="prev-btn" onclick="prevSlide()">← Назад</button>
-        <button id="next-btn" onclick="nextSlide()">Вперёд →</button>
+        <button id="prev-btn" onclick="prevSlide()">← Atpakaļ</button>
+        <button id="next-btn" onclick="nextSlide()">Tālāk →</button>
     </div>
 
     <script>
@@ -372,7 +436,7 @@
             }
         }
 
-        // Клавиатурная навигация
+        // Klaviatūras navigācija
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowRight' || e.key === ' ') {
                 nextSlide();
@@ -381,7 +445,7 @@
             }
         });
 
-        // Инициализация
+        // Inicializācija
         prevBtn.disabled = true;
     </script>
 </body>
